@@ -47,7 +47,7 @@ class Subscriber{
         //check if provided feed is a valid URL
         if (preg_match($this->regex_url, $feed)){
             //set the post string for subscribe / unsubscribe
-            $post_string = "hub.mode=$mode&hub.callback={$this->callback}&hub.verify=async&hub.topic={$feed}";
+            $post_string = "hub.mode=$mode&hub.callback={$this->callback}&hub.verify=async&hub.topic=$feed";
             
             //set up cURL request
             $ch = curl_init($this->hub);
