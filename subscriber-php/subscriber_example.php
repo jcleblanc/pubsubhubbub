@@ -9,7 +9,7 @@ $feed = 'http://www.example.com';
 //create new subscriber
 $subscriber = new Subscriber($hub, $callback);
 
-//subscribe / unsubscribe methods: response == True on success
+//subscribe / unsubscribe methods
 $response = $subscriber->subscribe($feed);
 //$response = $subscriber->unsubscribe($feed);
 
